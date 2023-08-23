@@ -1,21 +1,18 @@
-<template> <div id="app"> <h1>{{ message }}</h1> </div> </template>
+<template>
+  <img alt="Vue logo" src="./assets/logo.png">
+  <HelloWorld msg="Hello visitor, Welcome to Vue.js App" />
+</template>
 
+<script>
+import HelloWorld from './components/HelloWorld.vue'
 
-<script> 
-export default { 
-  data() { 
-    return { 
-      message: 'Hello, World! \n Welcome to my first Vue app.' 
-    } 
-  },
-  methods: {
-    formattedmessage() {
-      return this.message.replace(/\n/gi, '<br/>');
-    }
+export default {
+  name: 'App',
+  components: {
+    HelloWorld
   }
-} 
+}
 </script>
-
 
 <style>
 #app {
